@@ -196,7 +196,7 @@ body {
 }
 
 .section.plain {
-  background: var(--break)
+  background: var(--card)
 }
 
 .section.highlight {
@@ -320,7 +320,7 @@ body {
 
 .viz {
   background: var(--card);
-  border: 1px solid var(--line);
+  
   border-radius: 14px;
   padding: 12px
 }
