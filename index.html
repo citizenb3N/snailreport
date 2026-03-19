@@ -26,6 +26,7 @@
       <li><a href="#key-findings">Chiffres clés</a></li>
       <li><a href="#insights">Insights</a></li>
       <li><a href="#trends">Tendances</a></li>
+      <li><a href="#charts">Visualisations</a></li>
       <li><a href="#method">Méthodologie</a></li>
       <li><a href="#actions">Actions</a></li>
     </ul>
@@ -33,7 +34,6 @@
 </header>
 
 <main id="top" class="site-main">
-  <!-- HERO -->
   <section id="intro" class="hero" aria-labelledby="hero-title">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="container">
@@ -43,7 +43,6 @@
         <a class="btn primary" href="#key-findings">Voir les chiffres</a>
         <a class="btn ghost" href="#actions">Aller aux recommandations</a>
       </div>
-      <!-- Étiquettes contextuelles -->
       <ul class="tags" aria-label="Métadonnées">
         <li>Échantillon : <strong>52 répondants</strong></li>
         <li>Période : <strong>Avril–Juillet 2025</strong></li>
@@ -52,7 +51,6 @@
     </div>
   </section>
 
-  <!-- KPI / CHIFFRES CLÉS -->
   <section id="key-findings" class="section" aria-labelledby="kpi-title">
     <div class="container">
       <h2 id="kpi-title">Chiffres clés</h2>
@@ -90,52 +88,35 @@
           <p class="meta up">GenAI (code, tests, analyse)</p>
         </article>
       </div>
-      <p class="small note">💡 Modifie les valeurs <code>data-target</code> si nécessaire — l’animation mettra à jour les compteurs.</p>
     </div>
   </section>
 
-  <!-- INSIGHTS / FAITS SAILLANTS -->
   <section id="insights" class="section" aria-labelledby="insights-title">
     <div class="container">
       <h2 id="insights-title">Insights clés</h2>
       <div class="cards">
         <article class="card">
           <h3>Culture d’équipe > process</h3>
-          <p>La collaboration (84%), la responsabilisation (76%) et l’autonomie (70%) dominent, la <em>qualité</em> (65%) et l’<em>innovation</em> (30%) arrivent derrière.</p>
-          <ul class="bullets">
-            <li>Revue de code pratiquée à chaque PR (68%).</li>
-            <li>Doc centralisée pour 82% des équipes.</li>
-            <li>Outils phares : Jira, Confluence, Git.</li>
-          </ul>
+          <p>Collaboration (84%), responsabilisation (76%) et autonomie (70%) dominent ; qualité (65%) et innovation (30%) suivent.</p>
         </article>
         <article class="card">
-          <h3>Tests & automatisation montent en puissance</h3>
-          <p>Tests unitaires (94%), intégration (75%) et end‑to‑end (71%) ; CI (66%) et déploiements automatisés (81%) améliorent la cadence et la fiabilité.</p>
-          <ul class="bullets">
-            <li>Analyse de code intégrée pour 52%.</li>
-            <li>Freins : standardisation CI/CD et temps de build.</li>
-          </ul>
+          <h3>Tests & automatisation</h3>
+          <p>Unitaires (94%), intégration (75%), end‑to‑end (71%) ; CI (66%), CD (81%).</p>
         </article>
         <article class="card">
-          <h3>IA générative : adoption pragmatique</h3>
-          <p>71% des répondants utilisent l’IA, surtout pour la génération de code (45%) et l’analyse de qualité (23%). Copilot (64%) et ChatGPT (59%) dominent.</p>
-          <ul class="bullets">
-            <li>Gains perçus : productivité & qualité du code.</li>
-            <li>Défis : formation (≈69%) et coûts (42%).</li>
-          </ul>
+          <h3>IA générative</h3>
+          <p>71% d’adoption, surtout génération de code (45%) et analyse qualité (23%).</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- TENDANCES / VISUELS -->
   <section id="trends" class="section alt" aria-labelledby="trends-title">
     <div class="container">
       <h2 id="trends-title">Tendances</h2>
       <div class="trend-grid">
         <figure class="viz">
           <figcaption>Évolution (exemple visuel)</figcaption>
-          <!-- Mini‑chart en SVG (remplaçable par un graphique) -->
           <svg viewBox="0 0 320 120" role="img" aria-label="Courbe d’évolution">
             <defs>
               <linearGradient id="grad" x1="0" x2="1">
@@ -143,45 +124,74 @@
                 <stop offset="100%" stop-color="var(--acc2)" />
               </linearGradient>
             </defs>
-            <polyline fill="none" stroke="url(#grad)" stroke-width="3"
-              points="10,90 60,70 110,75 160,50 210,55 260,30 310,40" />
+            <polyline fill="none" stroke="url(#grad)" stroke-width="3" points="10,90 60,70 110,75 160,50 210,55 260,30 310,40" />
           </svg>
         </figure>
         <div class="trend-points">
-          <div class="trend"><span class="badge">↑</span> Adoption de l’IA générative et outillage (Copilot, ChatGPT) dans les équipes.</div>
-          <div class="trend"><span class="badge">→</span> Standardisation CI/CD incomplète, diversité d’outils et pratiques.</div>
-          <div class="trend"><span class="badge">★</span> Usage mixte open‑source/owner ; Java (47%) et C# (44%) en tête.</div>
+          <div class="trend"><span class="badge">↑</span> IA générative en hausse (Copilot/ChatGPT).</div>
+          <div class="trend"><span class="badge">→</span> CI/CD encore hétérogène.</div>
+          <div class="trend"><span class="badge">★</span> Java & C# en tête, usage mixte OSS/proprio.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MÉTHODO -->
+  <!-- VISUALISATIONS INTERACTIVES (quinconce) -->
+  <section id="charts" class="section" aria-labelledby="charts-title">
+    <div class="container">
+      <h2 id="charts-title">Visualisations interactives</h2>
+      <p class="lead">Une mise en page en quinconce, plus aérée, pour mieux respirer visuellement.</p>
+
+      <div class="charts-grid">
+        <article class="chart-card tall">
+          <h3>Répartition des organisations</h3>
+          <canvas id="orgChart"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Méthodes de développement</h3>
+          <canvas id="methodChart"></canvas>
+        </article>
+        <article class="chart-card wide">
+          <h3>Valeurs clés des équipes</h3>
+          <canvas id="valuesChart"></canvas>
+        </article>
+        <article class="chart-card">
+          <h3>Types de tests pratiqués</h3>
+          <canvas id="testChart"></canvas>
+        </article>
+        <article class="chart-card wide">
+          <h3>Usages de l’IA générative</h3>
+          <canvas id="aiChart"></canvas>
+        </article>
+        <article class="chart-card tall">
+          <h3>Langages les plus utilisés</h3>
+          <canvas id="langChart"></canvas>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="method" class="section" aria-labelledby="method-title">
     <div class="container">
       <h2 id="method-title">Méthodologie</h2>
       <div class="method">
         <dl>
-          <dt>Population</dt><dd>52 répondants (PME, ETI, grandes entreprises & secteur public).</dd>
-          <dt>Période</dt><dd>Collecte d’avril à juillet 2025 (questionnaire en ligne).</dd>
-          <dt>Questionnaire</dt><dd>78 questions (contexte, organisation, technologies, automatisation, sécurité, DevEx, démographie).</dd>
-          <dt>Collecte</dt><dd>Diffusion via réseaux pro & académiques (plateforme garantissant anonymat & RGPD).</dd>
-          <dt>Analyse</dt><dd>Nettoyage, agrégation, analyse quantitative & qualitative.</dd>
-          <dt>Limites</dt><dd>Échantillon restreint, biais de sélection & auto‑déclaration, temporalité (2025), portée FWB.</dd>
+          <dt>Population</dt><dd>52 répondants.</dd>
+          <dt>Période</dt><dd>Avril–Juillet 2025.</dd>
+          <dt>Questionnaire</dt><dd>78 questions.</dd>
         </dl>
       </div>
     </div>
   </section>
 
-  <!-- RECOMMANDATIONS -->
   <section id="actions" class="section highlight" aria-labelledby="actions-title">
     <div class="container">
       <h2 id="actions-title">Recommandations prioritaires</h2>
       <ol class="actions">
-        <li><strong>Standardiser la CI/CD.</strong> Modèles réutilisables, seuils SAST/coverage, exécution parallèle et caches pour réduire les temps de build.</li>
-        <li><strong>Formaliser les guides & la doc.</strong> Un guide de contribution et de code à jour ; documentation “near‑code” (Markdown, ADR) synchronisée.</li>
-        <li><strong>Professionnaliser l’usage de l’IA.</strong> Politiques d’usage, formations ciblées, outillage sécurisé (p. ex. IA locale/enterprise, journalisation des prompts).</li>
-        <li><strong>Gouvernance sécurité & dépendances.</strong> Politique organisationnelle, dépôt local, pinning, licences, processus de patching CVE accéléré.</li>
+        <li><strong>Standardiser la CI/CD.</strong></li>
+        <li><strong>Formaliser guides & doc.</strong></li>
+        <li><strong>Professionnaliser l’usage de l’IA.</strong></li>
+        <li><strong>Gouvernance sécurité & dépendances.</strong></li>
       </ol>
 
       <div class="cta-row">
@@ -199,5 +209,22 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+(() => {
+  const txt = getComputedStyle(document.documentElement);
+  const c1 = txt.getPropertyValue('--acc1').trim() || '#5fd59a';
+  const c2 = txt.getPropertyValue('--acc2').trim() || '#2fbf71';
+  const grid = 'rgba(255,255,255,0.1)';
+  const white = '#ffffff';
+  const baseOptions = (stacked=false) => ({ responsive: true, plugins: { legend: { labels: { color: white } } }, scales: { x: { stacked, ticks: { color: white }, grid: { color: grid } }, y: { stacked, ticks: { color: white }, grid: { color: grid } } } });
+  new Chart(document.getElementById('orgChart'), { type: 'doughnut', data: { labels: ['ETI (41%)','PME (31%)','Micro (14%)','Grandes (12%)'], datasets: [{ data: [41,31,14,12], backgroundColor: [c1, c2, '#4bd1ff', '#ff9ced'], borderWidth: 1 }] }, options: { plugins: { legend: { position: 'bottom', labels:{color:white} } } } });
+  new Chart(document.getElementById('methodChart'), { type: 'bar', data: { labels: ['Agile (69%)','Waterfall/V (5%)','Variable (26%)'], datasets: [{ label: 'Méthodes', data: [69,5,26], backgroundColor: [c1,'#ff6b6b',c2] }] }, options: Object.assign(baseOptions(false), { indexAxis: 'y', plugins:{ legend:{display:false} } }) });
+  new Chart(document.getElementById('valuesChart'), { type: 'radar', data: { labels: ['Transparence','Responsabilité','Respect','Qualité','Livraison','Innovation','Collaboration','Autonomie','Amélioration continue','Adaptabilité'], datasets: [{ label: 'Importance perçue', data: [23,28,21,24,13,11,31,26,15,22], backgroundColor: 'rgba(47,191,113,0.26)', borderColor: c2, pointBackgroundColor: c1 }] }, options: { plugins:{ legend:{ labels:{ color: white } } }, scales: { r: { angleLines:{color:grid}, grid:{color:grid}, pointLabels:{color:white}, ticks:{display:false} } } } });
+  new Chart(document.getElementById('testChart'), { type: 'bar', data: { labels:['Tests 2025'], datasets:[ { label:'Unitaires (29)', data:[29], backgroundColor:c1 }, { label:'Intégration (23)', data:[23], backgroundColor:'#4bd1ff' }, { label:'End‑to‑end (22)', data:[22], backgroundColor:c2 }, { label:'Charge (12)', data:[12], backgroundColor:'#ff9ced' }, { label:'Système (9)', data:[9], backgroundColor:'#ff6b6b' } ] }, options: baseOptions(true) });
+  new Chart(document.getElementById('aiChart'), { type: 'bar', data: { labels: ['Code (45%)','Analyse qualité (23%)','Tests (19%)','Doc (19%)','Perf (10%)','Conception (16%)'], datasets:[{ label:'Adoption IA (%)', data:[45,23,19,19,10,16], backgroundColor:c1 }] }, options: baseOptions(false) });
+  new Chart(document.getElementById('langChart'), { type: 'bar', data: { labels: ['Java','C#','SQL','TypeScript','JavaScript','Python','C/C++'], datasets: [{ label:'Nombre de répondants', data:[15,14,13,12,9,7,2], backgroundColor:[c1,c2,'#4bd1ff','#ff9ced','#ff6b6b',c1,c2] }] }, options: Object.assign(baseOptions(false), { plugins:{ legend:{display:false} } }) });
+})();
+</script>
 </body>
 </html>

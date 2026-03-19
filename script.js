@@ -41,14 +41,10 @@ const io = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('section').forEach(sec => io.observe(sec));
 
-// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', (ev) => {
     const id = a.getAttribute('href').slice(1);
     const el = document.getElementById(id);
-    if (el) {
-      ev.preventDefault();
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    if (el) { ev.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 });
