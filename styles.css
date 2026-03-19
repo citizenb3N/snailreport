@@ -1,0 +1,125 @@
+/* Palette & thème */
+:root{
+  --bg: #0b0f14;
+  --bg-alt:#0e141b;
+  --card:#111821;
+  --txt:#e6edf3;
+  --muted:#a9b2bd;
+  --line:#1d2631;
+  /* Accents inspirés "tech" — ajustables selon la charte SNAIL */
+  --acc1:#36e3b0; /* vert aqua */
+  --acc2:#7a5cff; /* violet */
+  --good:#44d18d;
+  --bad:#ff6b6b;
+  --warn:#f7b955;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
+  color:var(--txt); background:linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+
+.container{width:min(1120px, 92%); margin-inline:auto}
+
+.site-header{
+  position:sticky; top:0; z-index:1000; backdrop-filter:saturate(180%) blur(10px);
+  background:color-mix(in srgb, var(--bg) 92%, transparent);
+  border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between;
+  padding:12px 20px;
+}
+.brand{display:flex;gap:.6rem;align-items:center;color:var(--txt);text-decoration:none}
+.brand-logo{border-radius:6px; box-shadow:0 0 24px color-mix(in srgb, var(--acc1) 45%, transparent)}
+.brand-name{font-weight:700;letter-spacing:.2px}
+
+.site-nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.site-nav a{color:var(--muted);text-decoration:none;padding:.5rem .75rem;border-radius:8px}
+.site-nav a.active, .site-nav a:hover{color:var(--txt); background:rgba(255,255,255,.06)}
+.nav-toggle{display:none}
+
+@media (max-width:840px){
+  .nav-toggle{display:inline-block;background:none;color:var(--txt);border:1px solid var(--line);padding:.4rem .7rem;border-radius:8px}
+  .site-nav ul{display:none;position:absolute;right:16px;top:56px;background:var(--card);border:1px solid var(--line);padding:.5rem;border-radius:10px;flex-direction:column;min-width:220px}
+  .site-nav ul.open{display:flex}
+}
+
+.hero{position:relative; padding:72px 0 48px; overflow:hidden}
+.hero-bg{
+  position:absolute; inset:-20% -10% auto -10%; height:480px;
+  background:
+    radial-gradient(60% 60% at 20% 20%, color-mix(in srgb, var(--acc1) 25%, transparent), transparent 60%),
+    radial-gradient(70% 70% at 80% 20%, color-mix(in srgb, var(--acc2) 25%, transparent), transparent 60%);
+  filter:blur(24px);
+}
+.hero h1{font-size:clamp(1.8rem, 2vw + 1.2rem, 3rem); margin:0 0 .6rem; font-weight:800}
+.hero-sub{color:var(--muted);max-width:72ch;margin:.2rem 0 1rem}
+.hero .tags{display:flex;gap:.7rem 1rem;flex-wrap:wrap;padding:0;margin:1rem 0 0;list-style:none}
+.hero .tags li{font-size:.95rem;color:var(--muted);background:rgba(255,255,255,.05);border:1px solid var(--line);padding:.4rem .6rem;border-radius:999px}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;border-radius:10px;
+  padding:.7rem 1rem;border:1px solid var(--line); color:var(--txt)
+}
+.btn.primary{
+  background:linear-gradient(135deg, var(--acc1), var(--acc2));
+  border:0; box-shadow:0 10px 24px -10px color-mix(in srgb, var(--acc2) 45%, transparent);
+}
+.btn.ghost{background:transparent;color:var(--txt)}
+
+.section{padding:56px 0;border-top:1px solid var(--line)}
+.section.alt{background:linear-gradient(180deg, var(--bg-alt), var(--bg))}
+.section.highlight{background:linear-gradient(180deg, color-mix(in srgb, var(--acc2) 7%, var(--bg)), var(--bg-alt))}
+.lead{color:var(--muted);margin-top:-.4rem;margin-bottom:1.2rem}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+@media (max-width:1120px){ .kpi-grid{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:740px){ .kpi-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:520px){ .kpi-grid{grid-template-columns:1fr} }
+
+.kpi-card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 16px 12px;transition:transform .2s ease, border-color .2s ease}
+.kpi-card:hover{transform:translateY(-3px); border-color:color-mix(in srgb, var(--acc1) 35%, var(--line))}
+.kpi-card h3{margin:.2rem 0 .4rem; font-weight:600}
+.kpi{font-family:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:2.1rem; margin:.1rem 0 .2rem}
+.kpi .unit{font-size:1.1rem; color:var(--muted); margin-left:.15rem}
+.meta{color:var(--muted);font-size:.95rem}
+.meta.up{color:var(--good)}
+.meta.down{color:var(--bad)}
+.meta.neutral{color:var(--muted)}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:940px){ .cards{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:640px){ .cards{grid-template-columns:1fr} }
+.card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px}
+.card h3{margin-top:.2rem}
+.bullets{margin:.6rem 0 0}
+.bullets li{margin:.2rem 0}
+
+.trend-grid{display:grid;grid-template-columns:1.3fr .7fr; gap:18px; align-items:center}
+@media (max-width:840px){ .trend-grid{grid-template-columns:1fr} }
+.viz{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px}
+.viz svg{width:100%;height:auto}
+.trend-points{display:grid;gap:10px}
+.trend{display:flex;gap:.5rem;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid var(--line); padding:12px; border-radius:12px}
+.badge{display:inline-grid;place-items:center;min-width:24px;height:24px;border-radius:50%; color:#000; background:linear-gradient(135deg,var(--acc1),var(--acc2)); font-weight:800}
+
+.method dl{display:grid;grid-template-columns:auto 1fr; gap:8px 16px; background:var(--card); border:1px solid var(--line); padding:16px;border-radius:14px}
+.method dt{color:var(--muted)}
+.method dd{margin:0}
+
+.actions{display:grid; gap:.7rem; counter-reset:steps}
+.actions>li{background:var(--card); border:1px solid var(--line); padding:12px 14px; border-radius:12px}
+.actions>li strong{color:var(--txt)}
+
+.site-footer{border-top:1px solid var(--line); padding:18px 0; color:var(--muted)}
+.sep{opacity:.4}
+
+/* Focus & utilitaires */
+:focus-visible{outline:2px solid color-mix(in srgb, var(--acc1) 60%, white); outline-offset:2px}
+
+/* Impression */
+@media print{
+  .site-header, .site-footer, .btn, .nav-toggle { display:none !important; }
+  .section { page-break-inside: avoid; }
+}
