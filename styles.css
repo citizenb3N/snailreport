@@ -1,7 +1,11 @@
 :root{
-  --bg: #0b0f14; --bg-alt:#0e141b; --card:#111821; --txt:#e6edf3; --muted:#a9b2bd; --line:#1d2631;
-  --acc1:#5fd59a; --acc2:#2fbf71; --good:#44d18d; --bad:#ff6b6b; --warn:#f7b955;
+  --bg: #232e3b; --bg-alt:#2c333a; --card:#111821; --txt:#e6edf3; --muted:#a9b2bd; --line:#1d2631;
+ --acc1:#5fd59a; --acc2:#2fbf71; --good:#44d18d; --bad:#ff6b6b; --warn:#f7b955;
 }
+
+
+
+
 *{box-sizing:border-box} html,body{margin:0;padding:0}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--txt); background:linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);-webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
 .container{width:min(1120px, 92%); margin-inline:auto}
@@ -56,6 +60,16 @@ canvas{max-width:100%; margin:12px 0 28px}
 .chart-card canvas{ width:100%; height: 260px }
 .chart-card.wide{ grid-column: span 8 }
 .chart-card.tall canvas{ height: 320px }
+
+
+.chart-card.extrawide {
+  grid-column: 1 / -1; /* s'étend de la première à la dernière colonne */
+}
+
+.chart-card.mid {
+  grid-column: span 6; /* occupe 6 colonnes */
+}
+
 .charts-grid > .chart-card:nth-child(odd){ transform: translateY(6px) }
 .charts-grid > .chart-card:nth-child(even){ transform: translateY(-6px) }
 @media (max-width:820px){ .charts-grid > .chart-card{ transform:none } }
