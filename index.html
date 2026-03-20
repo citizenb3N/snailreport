@@ -111,24 +111,19 @@
     
     <section id="trends" class="section plain" aria-labelledby="trends-title">
       <div class="container">
-       
+        
         <div class="trend-grid">
-          <figure class="viz">
-            
-            <svg viewBox="0 0 320 120" role="img" >
-              <image xlink:href="resources/trends.svg" width="320" height="120" />
-            </svg>
-          </figure>
+          <div class="viz"></div>
           <div class="trend-points">
-            <div class="trend"><span class="badge">↑</span><b> IA générative en hausse (Copilot/ChatGPT).</b></div>
-            <div class="trend"><span class="badge">→</span><b><i> CI/CD encore hétérogène.</i></b></div>
-            <div class="trend"><span class="badge">★</span> Java & C# en tête, usage mixte OSS/proprio.</div>
+            <div class="trend"><b><i>↗️ IA générative en hausse (Copilot/ChatGPT).</i></b></div>
+            <div class="trend"><b><i>🔜 CI/CD encore hétérogène.</i></b></div>
+            <div class="trend"><b><i>⭐ Java & C# en tête, usage mixte OSS/proprio.</i></b></div>
           </div>
         </div>
       </div>
     </section>
     
-   
+    
     <section id="charts" class="section" aria-labelledby="charts-title">
       <div class="container">
         <h2 id="charts-title">Visualisations interactives</h2>
@@ -203,25 +198,25 @@
   <div class="container">
     <img src="resources/CC_BY-SA_icon.png" alt="Logo SNAIL" width="142" height="50" />
     <p>© 2026 — SNAIL team (UNamur). 
-</footer>
-
-<script src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-  (() => {
-    const txt = getComputedStyle(document.documentElement);
-    const c1 = txt.getPropertyValue('--acc1').trim() || '#5fd59a';
-    const c2 = txt.getPropertyValue('--acc2').trim() || '#2fbf71';
-    const grid = 'rgba(255,255,255,0.1)';
-    const white = '#ffffff';
-    const baseOptions = (stacked=false) => ({ responsive: true, plugins: { legend: { labels: { color: white } } }, scales: { x: { stacked, ticks: { color: white }, grid: { color: grid } }, y: { stacked, ticks: { color: white }, grid: { color: grid } } } });
-    new Chart(document.getElementById('orgChart'), { type: 'doughnut', data: { labels: ['ETI (41%)','PME (31%)','Micro (14%)','Grandes (12%)'], datasets: [{ data: [41,31,14,12], backgroundColor: [c1, c2, '#4bd1ff', '#ff9ced'], borderWidth: 1 }] }, options: { plugins: { legend: { position: 'bottom', labels:{color:white} } } } });
-    new Chart(document.getElementById('methodChart'), { type: 'bar', data: { labels: ['Agile (69%)','Waterfall/V (5%)','Variable (26%)'], datasets: [{ label: 'Méthodes', data: [69,5,26], backgroundColor: [c1,'#ff6b6b',c2] }] }, options: Object.assign(baseOptions(false), { indexAxis: 'y', plugins:{ legend:{display:false} } }) });
-    new Chart(document.getElementById('valuesChart'), { type: 'radar', data: { labels: ['Transparence','Responsabilité','Respect','Qualité','Livraison','Innovation','Collaboration','Autonomie','Amélioration continue','Adaptabilité'], datasets: [{ label: 'Importance perçue', data: [23,28,21,24,13,11,31,26,15,22], backgroundColor: 'rgba(47,191,113,0.26)', borderColor: c2, pointBackgroundColor: c1 }] }, options: { plugins:{ legend:{ labels:{ color: white } } }, scales: { r: { angleLines:{color:grid}, grid:{color:grid}, pointLabels:{color:white}, ticks:{display:false} } } } });
-    new Chart(document.getElementById('testChart'), { type: 'bar', data: { labels:['Tests 2025'], datasets:[ { label:'Unitaires (29)', data:[29], backgroundColor:c1 }, { label:'Intégration (23)', data:[23], backgroundColor:'#4bd1ff' }, { label:'End‑to‑end (22)', data:[22], backgroundColor:c2 }, { label:'Charge (12)', data:[12], backgroundColor:'#ff9ced' }, { label:'Système (9)', data:[9], backgroundColor:'#ff6b6b' } ] }, options: baseOptions(true) });
-    new Chart(document.getElementById('aiChart'), { type: 'bar', data: { labels: ['Code (45%)','Analyse qualité (23%)','Tests (19%)','Doc (19%)','Perf (10%)','Conception (16%)'], datasets:[{ label:'Adoption IA (%)', data:[45,23,19,19,10,16], backgroundColor:c1 }] }, options: baseOptions(false) });
-    new Chart(document.getElementById('langChart'), { type: 'bar', data: { labels: ['Java','C#','SQL','TypeScript','JavaScript','Python','C/C++'], datasets: [{ label:'Nombre de répondants', data:[15,14,13,12,9,7,2], backgroundColor:[c1,c2,'#4bd1ff','#ff9ced','#ff6b6b',c1,c2] }] }, options: Object.assign(baseOptions(false), { plugins:{ legend:{display:false} } }) });
-  })();
-</script>
-</body>
-</html>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      (() => {
+        const txt = getComputedStyle(document.documentElement);
+        const c1 = txt.getPropertyValue('--acc1').trim() || '#5fd59a';
+        const c2 = txt.getPropertyValue('--acc2').trim() || '#2fbf71';
+        const grid = 'rgba(255,255,255,0.1)';
+        const white = '#ffffff';
+        const baseOptions = (stacked=false) => ({ responsive: true, plugins: { legend: { labels: { color: white } } }, scales: { x: { stacked, ticks: { color: white }, grid: { color: grid } }, y: { stacked, ticks: { color: white }, grid: { color: grid } } } });
+        new Chart(document.getElementById('orgChart'), { type: 'doughnut', data: { labels: ['ETI (41%)','PME (31%)','Micro (14%)','Grandes (12%)'], datasets: [{ data: [41,31,14,12], backgroundColor: [c1, c2, '#4bd1ff', '#ff9ced'], borderWidth: 1 }] }, options: { plugins: { legend: { position: 'bottom', labels:{color:white} } } } });
+        new Chart(document.getElementById('methodChart'), { type: 'bar', data: { labels: ['Agile (69%)','Waterfall/V (5%)','Variable (26%)'], datasets: [{ label: 'Méthodes', data: [69,5,26], backgroundColor: [c1,'#ff6b6b',c2] }] }, options: Object.assign(baseOptions(false), { indexAxis: 'y', plugins:{ legend:{display:false} } }) });
+        new Chart(document.getElementById('valuesChart'), { type: 'radar', data: { labels: ['Transparence','Responsabilité','Respect','Qualité','Livraison','Innovation','Collaboration','Autonomie','Amélioration continue','Adaptabilité'], datasets: [{ label: 'Importance perçue', data: [23,28,21,24,13,11,31,26,15,22], backgroundColor: 'rgba(47,191,113,0.26)', borderColor: c2, pointBackgroundColor: c1 }] }, options: { plugins:{ legend:{ labels:{ color: white } } }, scales: { r: { angleLines:{color:grid}, grid:{color:grid}, pointLabels:{color:white}, ticks:{display:false} } } } });
+        new Chart(document.getElementById('testChart'), { type: 'bar', data: { labels:['Tests 2025'], datasets:[ { label:'Unitaires (29)', data:[29], backgroundColor:c1 }, { label:'Intégration (23)', data:[23], backgroundColor:'#4bd1ff' }, { label:'End‑to‑end (22)', data:[22], backgroundColor:c2 }, { label:'Charge (12)', data:[12], backgroundColor:'#ff9ced' }, { label:'Système (9)', data:[9], backgroundColor:'#ff6b6b' } ] }, options: baseOptions(true) });
+        new Chart(document.getElementById('aiChart'), { type: 'bar', data: { labels: ['Code (45%)','Analyse qualité (23%)','Tests (19%)','Doc (19%)','Perf (10%)','Conception (16%)'], datasets:[{ label:'Adoption IA (%)', data:[45,23,19,19,10,16], backgroundColor:c1 }] }, options: baseOptions(false) });
+        new Chart(document.getElementById('langChart'), { type: 'bar', data: { labels: ['Java','C#','SQL','TypeScript','JavaScript','Python','C/C++'], datasets: [{ label:'Nombre de répondants', data:[15,14,13,12,9,7,2], backgroundColor:[c1,c2,'#4bd1ff','#ff9ced','#ff6b6b',c1,c2] }] }, options: Object.assign(baseOptions(false), { plugins:{ legend:{display:false} } }) });
+      })();
+    </script>
+  </body>
+  </html>

@@ -196,8 +196,16 @@ body {
 }
 
 .section.plain {
-  background: var(--card)
+  background: repeating-linear-gradient(
+  45deg,
+  #14151e,
+  #292a34 10px,
+  #1c2037 10px,
+  #191c2e 20px
+);
 }
+  
+
 
 .section.highlight {
   background: linear-gradient(180deg, color-mix(in srgb, var(--acc2) 7%, var(--bg)), var(--bg-alt))
@@ -307,7 +315,7 @@ body {
 
 .trend-grid {
   display: grid; 
-  grid-template-columns: 1.3fr .7fr;
+  grid-template-columns: .7fr 1.3fr;
   gap: 3px;
   align-items: center 
 }
@@ -339,10 +347,11 @@ body {
   display: flex;
   gap: .5rem;
   align-items: flex-start;
-  background: rgba(255, 255, 255, .04);
+  background: var(--card);
   border: 1px solid var(--line);
   padding: 12px;
-  border-radius: 12px
+  border-radius: 12px;
+   font-size: 1.5vw;
 }
 
 .badge {
